@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.video video {
+  width: 114%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
+}
+
+.video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 114%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 139, 0.24);
+  margin-top: 20px;
+  width: 90%;
+  height: 63%;
+  max-width: 600px;
+  padding: 20px;
+  font-family: 'Lobster', cursive;
+  border-radius: 30px;
+  border: 5px solid transparent;
+  animation: borda 8s linear infinite;
+}
+
+.borda {
+  box-shadow: 0px 0px 0px 0px black;
+  animation: borda-animation 1s linear infinite;
+  background: linear-gradient(45deg, red, green, blue);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes borda {
+  25% {
+    box-shadow: 0px 0px 20px red, 0px 0px 10px green, 0px 0px 30px blue;
+  }
+}
+
+@keyframes borda-inversa {
+  0% {
+    border-color: blue;
+    background-position: 0%;
+  }
+  50% {
+    border-color: green;
+    background-position: 100%;
+  }
+  100% {
+    border-color: blue;
+    background-position: 0%;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.titulo {
+  color: white;
+  transition-duration: 0.2s;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 213px;
+  height: 29px;
+  margin: 0 auto;
+  margin-top: -3px;
+  margin-bottom: 29px;
+}
+
+#email,
+#senha {
+  outline: none;
+  padding: 2em;
+  border: none;
+  width: 83%;
+  height: 12px;
+  border-radius: 15px;
+  box-shadow: inset 2px 5px 10px black;
+  transition: 300ms;
+  margin-top: -18px;
+  margin-bottom: 10px;
+}
+
+#login{
+  position: absolute;
+  top: 53%;
+  left: 7%;
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: center;
+  font-size: 22px;
+  outline: none;
+  padding: 1em;
+  border: none;
+  width: 89%;
+  height: 66px;
+  border-radius: 15px;
+  box-shadow: 2px 5px 10px black;
+  transition-duration: 0.3s;
+  display: block;
+  cursor: pointer;
+  margin-top: 20px;
+  text-decoration-line: none;
+}
+
+
+#singup {
+  position: absolute;
+  top: 71%;
+  left: 7%;
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: center;
+  font-size: 22px;
+  outline: none;
+  padding: 1em;
+  border: none;
+  width: 89%;
+  height: 66px;
+  border-radius: 15px;
+  box-shadow: 2px 5px 10px black;
+  transition-duration: 0.3s;
+  display: block;
+  cursor: pointer;
+  margin-top: 20px;
+  text-decoration-line: none;
+}
+
+  #login:hover{
+    transform: translateY(-5px);
+    background-color: rgba(137, 43, 226, 0.233);
+    color: rgb(255, 255, 255);
+  }
+#singup:hover {
+  transform: translateY(-5px);
+  background-color: rgba(137, 43, 226, 0.233);
+  color: rgb(255, 255, 255);
+}
+
+.esqueceu {
+  font-size: 26px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 91%;
+  left: 53%;
+  text-align: right;
+}
+
+.esqueceu a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+/* Estilos para telas médias */
+@media screen and (max-width: 768px) {
+  main {
+    width: 80%;
+    max-width: 500px;
+  }
+  #login,
+  #singup {
+    width: 100%;
+  }
+  #email,
+  #senha {
+    width: 100%;
+  }
+}
+
+/* Estilos para telas pequenas */
+@media screen and (max-width: 480px) {
+  main {
+    width: 90%;
+    max-width: 400px;
+  }
+  #login,
+  #singup {
+    width: 83%;
+    font-size: 18px;
+  }
+  #email,
+  #senha {
+    width: 83%;
+    font-size: 18px;
+  }
+  .esqueceu {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+  }
+}
